@@ -39,7 +39,7 @@
     #define BOARD_NAME              "Board:MKS DLC32 CNC V1.0"
 #endif
 
-#define FW_NAME                     "V2.1(8M.H35.20220421)"
+#define FW_NAME                     "KP V2.1(8M.H35.20220421)"
 
 
 #ifdef N_AXIS
@@ -83,7 +83,7 @@
 #endif
 
 // Laser pin set
-#define SPINDLE_TYPE                SpindleType::PWM 
+#define SPINDLE_TYPE                SpindleType::LASER 
 #ifdef USE_BOARD_V2_0
 #define SPINDLE_OUTPUT_PIN          GPIO_NUM_32
 #else 
@@ -98,10 +98,12 @@
 #endif
 
 #ifdef USE_BOARD_V2_0
-#define PROBE_PIN                   GPIO_NUM_22    
+//#define PROBE_PIN                   GPIO_NUM_22
+#define CONTROL_FEED_HOLD_PIN       GPIO_NUM_22    
 #else
 #define PROBE_PIN                   GPIO_NUM_2    
 #endif
+
 
 #define LCD_SCK				        GPIO_NUM_18
 #define LCD_MISO				    GPIO_NUM_19
@@ -116,7 +118,8 @@
 #define IIC_SCL                     GPIO_NUM_4
 #define IIC_SDA                     GPIO_NUM_0
 
-#define COOLANT_FLOOD_PIN           IIC_SCL
+//#define COOLANT_FLOOD_PIN           IIC_SCL
+#define CONTROL_CYCLE_START_PIN       IIC_SCL
 
 //sd card spi
 #define GRBL_SPI_SCK 			    GPIO_NUM_14
@@ -133,7 +136,7 @@
 #define DEFAULT_STEPPER_IDLE_LOCK_TIME      25
 
 #define DEFAULT_STEPPING_INVERT_MASK    	0 // uint8_t
-#define DEFAULT_DIRECTION_INVERT_MASK   	1 // uint8_t
+#define DEFAULT_DIRECTION_INVERT_MASK   	5 // uint8_t- invert x and z 
 #define DEFAULT_INVERT_ST_ENABLE        	0 // boolean
 #define DEFAULT_INVERT_LIMIT_PINS       	1 // boolean
 #define DEFAULT_INVERT_PROBE_PIN        	1 // boolean
