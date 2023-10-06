@@ -39,7 +39,7 @@
     #define BOARD_NAME              "Board:MKS DLC32 CNC V1.0"
 #endif
 
-#define FW_NAME                     "KP V2.1(8M.H35.20220421)"
+#define FW_NAME                     "KMP V2.1(8M.H35.20220421)"
 
 
 #ifdef N_AXIS
@@ -85,7 +85,7 @@
 // Laser pin set
 #define SPINDLE_TYPE                SpindleType::LASER 
 #ifdef USE_BOARD_V2_0
-#define SPINDLE_OUTPUT_PIN          GPIO_NUM_32
+#define LASER_OUTPUT_PIN          GPIO_NUM_32
 #else 
 #define SPINDLE_OUTPUT_PIN          GPIO_NUM_22
 #endif
