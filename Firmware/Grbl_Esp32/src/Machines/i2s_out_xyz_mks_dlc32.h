@@ -39,7 +39,7 @@
     #define BOARD_NAME              "Board:MKS DLC32 CNC V1.0"
 #endif
 
-#define FW_NAME                     "KMP V2.1(8M.H35.20220421)"
+#define FW_NAME                     "KP v2- V2.1(8M.H35.20220421)"
 
 
 #ifdef N_AXIS
@@ -94,12 +94,14 @@
 #define Y_LIMIT_PIN                 GPIO_NUM_35
 
 #if defined(USR_Z_MOTOR)
-#define Z_LIMIT_PIN                 GPIO_NUM_34
+//#define Z_LIMIT_PIN                 GPIO_NUM_34
 #endif
+#define CONTROL_FEED_HOLD_PIN GPIO_NUM_34
+ 
 
 #ifdef USE_BOARD_V2_0
-//#define PROBE_PIN                   GPIO_NUM_22
-#define CONTROL_FEED_HOLD_PIN       GPIO_NUM_22    
+#define PROBE_PIN                   GPIO_NUM_22
+//#define CONTROL_FEED_HOLD_PIN       GPIO_NUM_22    
 #else
 #define PROBE_PIN                   GPIO_NUM_2    
 #endif
