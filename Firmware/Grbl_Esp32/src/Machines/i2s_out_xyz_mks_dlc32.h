@@ -39,7 +39,7 @@
     #define BOARD_NAME              "Board:MKS DLC32 CNC V1.0"
 #endif
 
-#define FW_NAME                     "KP v2- V2.1(8M.H35.20220421)"
+#define FW_NAME                     "PV V1 MKS V2.1(8M.H35.20220421)"
 
 
 #ifdef N_AXIS
@@ -170,9 +170,9 @@
 
 #define DEFAULT_LASER_MODE 0 // false
 
-#define DEFAULT_X_STEPS_PER_MM 80.0
-#define DEFAULT_Y_STEPS_PER_MM 80.0
-#define DEFAULT_Z_STEPS_PER_MM 80.0
+#define DEFAULT_X_STEPS_PER_MM 50.0 //16 tooth GT2 1/8 microsteps
+#define DEFAULT_Y_STEPS_PER_MM 50.0
+#define DEFAULT_Z_STEPS_PER_MM 200.0 //8mm lead 1/8 microsteps
 
 #define DEFAULT_X_MAX_RATE 6000.0 // mm/s
 #define DEFAULT_Y_MAX_RATE 6000.0 // mm/s
